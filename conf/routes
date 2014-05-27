@@ -3,8 +3,8 @@
 # ~~~~
 
 # A19
-GET     /a19/makeRequest                controllers.Application.makeRequest()
-GET     /a19/parseResponse              controllers.Application.parseResponse()
+GET     /a19/:channel/:id               controllers.A19Controller.send(channel: String, id: String)
+# GET     /a19/parseResponse              controllers.A19Controller.parseResponse()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

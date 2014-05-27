@@ -3,6 +3,7 @@ package models;
 import ca.uhn.hl7v2.DefaultHapiContext;
 import ca.uhn.hl7v2.HL7Exception;
 import ca.uhn.hl7v2.HapiContext;
+import ca.uhn.hl7v2.model.Message;
 import ca.uhn.hl7v2.model.v24.message.QRY_A19;
 import ca.uhn.hl7v2.model.v24.segment.MSH;
 import ca.uhn.hl7v2.model.v24.segment.QRD;
@@ -42,5 +43,9 @@ public class A19Request {
             e.printStackTrace();
             return "ERR";
         }
+    }
+
+    public Message toMessage() {
+        return qry;
     }
 }
